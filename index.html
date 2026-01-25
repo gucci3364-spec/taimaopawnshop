@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台茂汽車借款 | 羅經理專業服務 | 高額度・低利息・免留車</title>
-    <meta name="description" content="台茂汽車借款，專營各類汽車融資服務。羅經理親辦，成功案例眾多，不限車齡車種，進口車、國產車皆可辦理。電話：02-8792-1111。">
+    <title>台茂汽車借款 | 羅經理親辦 | 萬物皆可貸・高額度低利息</title>
+    <meta name="description" content="台茂汽車借款，台北專業融資首選。羅經理親自服務，不限車齡車種，超跑、進口車、國產車皆可辦理。當日撥款，免留車。電話：02-8792-1111。地址：台北市內湖區成功路三段88號。">
     <style>
+        /* --- 預設色系 (尊榮藍金 - Default) --- */
         :root {
-            --primary-color: #003366; /* 穩重的深藍：代表信任與專業 */
-            --secondary-color: #002244; /* 更深的藍：用於強調 */
-            --accent-color: #d4af37; /* 香檳金：代表價值與資金 */
-            --bg-light: #f4f7f6; /* 極淺的灰藍色背景，不刺眼 */
-            --text-dark: #2c3e50;
-            --text-gray: #5a6b7c;
-            --white: #ffffff;
-            --line-green: #00B900;
+            --primary-color: #003366;  /* 主色：深藍 */
+            --secondary-color: #002244; /* 次色：更深藍 */
+            --accent-color: #d4af37;   /* 點綴：金 */
+            --text-on-primary: #ffffff;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --line-green: #00c300;
         }
 
         * {
@@ -22,119 +22,211 @@
             margin: 0;
             padding: 0;
             font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--bg-light);
+            padding-bottom: 60px; /* 預留底部懸浮按鈕空間 */
+            transition: background-color 0.3s;
         }
 
-        /* 通用標題樣式 */
+        /* --- 排版工具 --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+        
         .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 50px;
+            position: relative;
         }
 
         .section-title h2 {
             font-size: 2.2rem;
             color: var(--primary-color);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
+            margin-bottom: 10px;
+            font-weight: 800;
         }
 
-        .section-title h2::after {
+        .section-title p {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .section-title::after {
             content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
+            display: block;
+            width: 60px;
             height: 4px;
-            background-color: var(--accent-color);
+            background: var(--accent-color);
+            margin: 15px auto 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
+        /* --- Header --- */
         header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 999;
         }
-        
-        header .header-content {
+
+        .nav-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 70px;
         }
 
-        header h1 { font-size: 1.5rem; }
-        header .contact-top { font-weight: bold; color: var(--accent-color); }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
 
-        /* Hero Section */
+        .logo span { color: var(--accent-color); }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(0, 34, 68, 0.8), rgba(0, 34, 68, 0.7)), url('https://images.unsplash.com/photo-1503376763036-066120622c74?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            /* 這裡使用漸層疊加背景圖，讓文字更清楚 */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-blend-mode: multiply; /* 混合模式讓背景色與圖片融合 */
             background-size: cover;
             background-position: center;
-            color: var(--white);
-            padding: 5rem 1rem;
+            color: var(--text-on-primary);
+            padding: 100px 0;
             text-align: center;
         }
 
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            color: #ddd;
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
 
-        /* Buttons */
-        .btn {
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .h-tag {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--accent-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: var(--accent-color);
+        }
+
+        .btn-main {
             display: inline-block;
-            padding: 15px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            margin: 5px;
-            border: 2px solid transparent;
-        }
-
-        .btn-gold {
+            padding: 15px 40px;
             background-color: var(--accent-color);
-            color: #000;
+            color: #000; /* 按鈕文字固定黑色較清楚，或可依風格調整 */
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        .btn-gold:hover { background-color: #bfa030; transform: translateY(-2px); }
 
-        .btn-line {
-            background-color: transparent;
-            border: 2px solid var(--line-green);
-            color: var(--line-green);
-            background-color: rgba(0,0,0,0.3);
-        }
-        .btn-line:hover { background-color: var(--line-green); color: white; }
+        .btn-main:hover { transform: translateY(-3px); filter: brightness(1.1); }
 
-        /* --- New Section: Success Cases --- */
-        .cases-section {
-            padding: 5rem 0;
-            background-color: var(--white);
+        /* --- Features --- */
+        .features { background-color: #ffffff; }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .f-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .f-title { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary-color); font-weight: bold; }
+
+        /* --- Process --- */
+        .process { background-color: var(--bg-light); }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            width: 22%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .step-num {
+            background: var(--accent-color);
+            color: var(--primary-color); /* 數字顏色對比 */
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        .step-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 5px; color: var(--primary-color); }
+
+        /* --- Success Cases --- */
+        .cases { background-color: #ffffff; }
 
         .case-grid {
             display: grid;
@@ -143,299 +235,473 @@
         }
 
         .case-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            overflow: hidden;
-            border-top: 5px solid var(--accent-color);
-            transition: transform 0.3s;
-        }
-
-        .case-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .case-body {
-            padding: 2rem;
-        }
-
-        .case-title {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .case-car {
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .case-desc {
-            color: var(--text-gray);
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-
-        .case-result {
-            background-color: #f0f4f8;
-            padding: 10px;
-            border-radius: 5px;
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-
-        /* --- New Section: Q&A --- */
-        .faq-section {
-            padding: 5rem 0;
-            background-color: var(--bg-light);
-        }
-
-        .faq-item {
-            background: var(--white);
-            margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 20px;
-            background-color: var(--primary-color);
-            color: var(--white);
-            font-weight: bold;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .faq-question::before {
-            content: 'Q';
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-weight: 800;
-        }
-
-        .faq-answer {
-            padding: 25px;
-            color: var(--text-dark);
+            background: var(--bg-light);
             border-left: 5px solid var(--accent-color);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        /* Brands Section (Simplified code for brevity, same rich content) */
-        .brands-section {
-            padding: 5rem 0;
-            text-align: center;
-            background-color: var(--white);
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
         }
         
-        .brand-grid {
+        .case-role { background: var(--primary-color); color: var(--text-on-primary); padding: 2px 8px; border-radius: 3px; font-size: 0.8rem; }
+        .case-money { color: #d63031; font-weight: 900; font-size: 1.1rem; }
+        
+        /* --- Brands --- */
+        .brands { background-color: #111; color: white; }
+        
+        .brand-cloud {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
-            margin-top: 30px;
+            gap: 15px;
         }
 
-        .brand-tag {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            padding: 10px 25px;
-            border-radius: 50px;
-            color: #495057;
-            font-weight: 500;
+        .b-tag {
+            background: #222;
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            color: #aaa;
             transition: 0.3s;
         }
 
-        .brand-tag:hover {
+        .b-tag:hover { border-color: var(--accent-color); color: white; }
+        .b-tag.lux { border-color: var(--accent-color); color: var(--accent-color); }
+
+        /* --- FAQ --- */
+        .faq { background-color: var(--bg-light); }
+        .faq-item { background: white; margin-bottom: 15px; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+        .q-text { font-weight: bold; color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center; }
+        .q-text::before { content: 'Q'; background: var(--secondary-color); color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 10px; font-size: 0.8rem; }
+
+        /* --- Map & Footer --- */
+        .map-section {
             background-color: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        .brand-tag.luxury {
-            border: 1px solid var(--accent-color);
-            color: #8a7300;
+        .map-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 50px;
+            color: var(--text-on-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+        }
+
+        iframe { width: 100%; height: 100%; border: 0; }
+
+        .footer-info h3 { margin-bottom: 20px; font-size: 1.8rem; }
+        .footer-info p { margin-bottom: 15px; font-size: 1.1rem; }
+        .footer-info a { color: var(--accent-color); text-decoration: none; font-weight: bold; }
         
-        /* Footer */
-        .footer {
-            background-color: #1a1a1a;
-            color: #aaa;
-            padding: 4rem 0 2rem;
+        .copyright {
+            background-color: var(--secondary-color);
+            color: #888;
             text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
         }
 
-        .footer h3 { color: var(--white); margin-bottom: 1.5rem; font-size: 1.5rem; }
-        .footer .contact-detail { font-size: 1.5rem; color: var(--white); margin-bottom: 1rem; }
-        .footer .contact-detail a { color: var(--accent-color); text-decoration: none; }
-        .footer .line-id { font-size: 1.2rem; margin-bottom: 2rem; }
+        /* --- Mobile Sticky Bar --- */
+        .mobile-sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: white;
+            display: flex;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
 
+        .sticky-btn {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .btn-call { background-color: var(--accent-color); color: black; }
+        .btn-line-sticky { background-color: var(--line-green); color: white; }
+
+        /* --- Theme Switcher (Demo Only) --- */
+        .theme-switcher {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            z-index: 10000;
+            width: 200px;
+            display: none; /* 預設隱藏，點按鈕開啟 */
+        }
+        .theme-switcher.active { display: block; }
+        .theme-btn {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+        .toggle-theme-btn {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #333;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10001;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: 2px solid white;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h2 { font-size: 2rem; }
-            .header-content { flex-direction: column; gap: 10px; }
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .process-steps { flex-direction: column; }
+            .step-card { width: 100%; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container header-content">
-            <h1>台茂汽車借款</h1>
-            <div class="contact-top">
-                羅經理專線：02-8792-1111
+        <div class="container nav-bar">
+            <a href="#" class="logo">台茂<span>汽車借款</span></a>
+            <div class="nav-links">
+                <a href="#features">服務優勢</a>
+                <a href="#process">借款流程</a>
+                <a href="#cases">成功案例</a>
+                <a href="#map">門市資訊</a>
             </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h2>活化愛車價值，成就您的事業</h2>
-            <p>不限車種、免留車、當日撥款。專為企業主與個人打造的資金周轉方案。</p>
-            <div class="btn-group">
-                <a href="tel:0287921111" class="btn btn-gold">📞 立即撥打 02-8792-1111</a>
-                <a href="https://line.me/ti/p/areDMMNJ5b" target="_blank" class="btn btn-line">💬 LINE 線上諮詢</a>
+            <h1>讓愛車成為您的<br><span style="color:var(--accent-color)">最強資金後盾</span></h1>
+            <div class="hero-features">
+                <span class="h-tag">✔ 當日撥款</span>
+                <span class="h-tag">✔ 實體店面</span>
+                <span class="h-tag">✔ 絕對保密</span>
+            </div>
+            <p>羅經理專業規劃，不限車種車齡，額度最高、利息最低。</p>
+            <a href="tel:0287921111" class="btn-main">📞 立即免費估價</a>
+        </div>
+    </section>
+
+    <section id="features" class="section-padding features">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>四大服務優勢</h2>
+                <p>為什麼選擇台茂？因為我們懂您的需求</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="f-icon">🚀</span>
+                    <div class="f-title">極速撥款</div>
+                    <p>手續簡便，最快 30 分鐘完成審核，現金當場點交，解決您的燃眉之急。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="f-icon">🚗</span>
+                    <div class="f-title">萬物皆可貸</div>
+                    <p>不論是超跑、轎車、貨車、工程車，甚至機車，有殘值皆可辦理。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="f-icon">🔒</span>
+                    <div class="f-title">隱私保密</div>
+                    <p>尊重客戶隱私，過程絕對保密，免通知家人、免聯徵，讓您安心周轉。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="f-icon">💰</span>
+                    <div class="f-title">高額低利</div>
+                    <p>羅經理親自鑑價，給您高於市場行情的額度，並提供優惠利率方案。</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="cases-section">
+    <section id="process" class="section-padding process">
         <div class="container">
-            <div class="section-title">
-                <h2>成功核貸案例</h2>
-                <p style="margin-top:10px; color:#666;">真實案例分享，協助無數客戶度過資金難關</p>
+            <div class="section-title text-center">
+                <h2>借款流程</h2>
+                <p>簡單四步驟，資金輕鬆到手</p>
             </div>
-            
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <div class="step-title">線上諮詢</div>
+                    <p>來電或加LINE，提供車輛資訊初估額度。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <div class="step-title">現場鑑價</div>
+                    <p>駕車至本店，由羅經理親自確認車況。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <div class="step-title">填寫資料</div>
+                    <p>審核額度與利率，說明清楚後簽約。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <div class="step-title">立即撥款</div>
+                    <p>手續完成，當場領取現金或匯款。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="section-padding cases">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>成功核貸實例</h2>
+                <p>他們都選擇了羅經理，您也可以</p>
+            </div>
             <div class="case-grid">
                 <div class="case-card">
-                    <div class="case-body">
-                        <div class="case-title">中小企業主 工程款周轉</div>
-                        <span class="case-car">BENZ S450 (原車融資)</span>
-                        <p class="case-desc">張先生經營營造公司，因上游廠商票期延後，急需現金支付工資與材料費。透過羅經理協助，當天鑑價，不需留車，讓張先生能繼續跑工地。</p>
-                        <div class="case-result">✅ 核貸金額：300 萬 (當日撥款)</div>
+                    <div class="case-header">
+                        <span class="case-role">企業周轉</span>
+                        <span class="case-money">核貸 350 萬</span>
                     </div>
+                    <h4>Mercedes-Benz S-Class</h4>
+                    <p style="margin-top:10px; color:#666; font-size:0.95rem;">陳老闆因工程款延遲，急需發放員工薪水。使用公司名下賓士車辦理原車融資，當天下午拿到資金，順利發薪。</p>
                 </div>
-
                 <div class="case-card">
-                    <div class="case-body">
-                        <div class="case-title">網拍老闆 進貨週轉</div>
-                        <span class="case-car">BMW 320i (分期車增貸)</span>
-                        <p class="case-desc">林小姐經營代購，遇到國外限時折扣需大量進貨。車子本身還有銀行貸款，擔心無法辦理。羅經理評估車輛殘值後，成功辦理二胎增貸。</p>
-                        <div class="case-result">✅ 核貸金額：80 萬 (保留現金流)</div>
+                    <div class="case-header">
+                        <span class="case-role">個人急用</span>
+                        <span class="case-money">核貸 120 萬</span>
                     </div>
+                    <h4>Tesla Model 3</h4>
+                    <p style="margin-top:10px; color:#666; font-size:0.95rem;">林小姐臨時需要家中裝潢尾款，不想動用股票。透過羅經理協助，用特斯拉辦理週轉，保留現金流，裝潢順利完工。</p>
                 </div>
-
                 <div class="case-card">
-                    <div class="case-body">
-                        <div class="case-title">自營商 短期投資</div>
-                        <span class="case-car">PORSCHE Cayenne</span>
-                        <p class="case-desc">王先生看準一筆短期投資機會，需要本金投入。不想變賣愛車，選擇台茂汽車借款。手續簡便，隱私保密，獲利後隨時可結清。</p>
-                        <div class="case-result">✅ 核貸金額：250 萬 (隨借隨還)</div>
+                    <div class="case-header">
+                        <span class="case-role">小額融資</span>
+                        <span class="case-money">核貸 15 萬</span>
                     </div>
+                    <h4>Toyota Altis</h4>
+                    <p style="margin-top:10px; color:#666; font-size:0.95rem;">張先生是業務，短期需要生活週轉金。雖然車齡已高，但車況良好，我們依舊核准撥款，協助度過難關。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="faq-section">
+    <section class="section-padding brands">
         <div class="container">
-            <div class="section-title">
-                <h2>常見借款問與答</h2>
-                <p style="margin-top:10px; color:#666;">透明、誠信，解決您所有的疑慮</p>
+            <div class="section-title text-center">
+                <h2 style="color:white">受理各大品牌</h2>
+                <p style="color:#888">無論名車代步車，皆有豐富經驗</p>
             </div>
-            
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Q1：辦理汽車借款需要把車留下來嗎？</div>
-                    <div class="faq-answer">
-                        <p>不用！我們主打「<strong>原車融資、免留車</strong>」服務。完成設定手續後，您可以將愛車開回家，不影響您的日常通勤與工作使用，資金與用車需求同時滿足。</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q2：我的車還在繳銀行貸款（分期車），可以借嗎？</div>
-                    <div class="faq-answer">
-                        <p>可以的！只要您的車輛還有殘值，我們提供「<strong>汽車二胎</strong>」或「<strong>轉增貸</strong>」服務。我們會協助評估可貸額度，讓您活用愛車價值。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Q3：申請需要準備什麼資料？多久會撥款？</div>
-                    <div class="faq-answer">
-                        <p>僅需準備：<strong>車主身分證、行照、第二證件（健保卡或駕照）</strong>。若資料齊全，最快當天即可完成鑑價與審核，現場立即撥款，解決您的燃眉之急。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Q4：借款利息怎麼算？還款方式有彈性嗎？</div>
-                    <div class="faq-answer">
-                        <p>我們依照政府法規計息，絕對公開透明。羅經理會根據您的條件規劃最適合的還款方案（如本利攤還或只繳利息），讓您輕鬆還款無壓力。</p>
-                    </div>
-                </div>
+            <div class="brand-cloud">
+                <span class="b-tag lux">Ferrari 法拉利</span>
+                <span class="b-tag lux">Lamborghini 藍寶堅尼</span>
+                <span class="b-tag lux">McLaren 麥拉倫</span>
+                <span class="b-tag lux">Rolls-Royce 勞斯萊斯</span>
+                <span class="b-tag lux">Bentley 賓利</span>
+                <span class="b-tag lux">Porsche 保時捷</span>
+                <span class="b-tag lux">Maserati 瑪莎拉蒂</span>
+                <span class="b-tag">Mercedes-Benz 賓士</span>
+                <span class="b-tag">BMW 寶馬</span>
+                <span class="b-tag">Audi 奧迪</span>
+                <span class="b-tag">Lexus 凌志</span>
+                <span class="b-tag">Volvo 富豪</span>
+                <span class="b-tag">Tesla 特斯拉</span>
+                <span class="b-tag">Toyota 豐田</span>
+                <span class="b-tag">Honda 本田</span>
+                <span class="b-tag">Nissan 日產</span>
+                <span class="b-tag">Mazda 馬自達</span>
+                <span class="b-tag">Ford 福特</span>
+                <span class="b-tag">Volkswagen 福斯</span>
+                <span class="b-tag">Mitsubishi 三菱</span>
+                <span class="b-tag">Hyundai 現代</span>
+                <span class="b-tag">Suzuki 鈴木</span>
             </div>
         </div>
     </section>
 
-    <section class="brands-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>受理車系品牌</h2>
-                <p style="margin-top:10px; color:#666;">市場主流品牌與特殊車款皆有豐富經驗</p>
+    <section id="faq" class="section-padding faq">
+        <div class="container" style="max-width:800px;">
+            <div class="section-title text-center">
+                <h2>常見問題</h2>
             </div>
-            
-            <div class="brand-grid">
-                <div class="brand-tag luxury">Ferrari 法拉利</div>
-                <div class="brand-tag luxury">Lamborghini 藍寶堅尼</div>
-                <div class="brand-tag luxury">McLaren 麥拉倫</div>
-                <div class="brand-tag luxury">Rolls-Royce 勞斯萊斯</div>
-                <div class="brand-tag luxury">Bentley 賓利</div>
-                <div class="brand-tag luxury">Porsche 保時捷</div>
-                <div class="brand-tag luxury">Maserati 瑪莎拉蒂</div>
-                
-                <div class="brand-tag">Mercedes-Benz 賓士</div>
-                <div class="brand-tag">BMW 寶馬</div>
-                <div class="brand-tag">Audi 奧迪</div>
-                <div class="brand-tag">Lexus 凌志</div>
-                <div class="brand-tag">Volvo 富豪</div>
-                <div class="brand-tag">Tesla 特斯拉</div>
-                <div class="brand-tag">Land Rover 荒原路華</div>
-                
-                <div class="brand-tag">Toyota 豐田</div>
-                <div class="brand-tag">Honda 本田</div>
-                <div class="brand-tag">Nissan 日產</div>
-                <div class="brand-tag">Mazda 馬自達</div>
-                <div class="brand-tag">Ford 福特</div>
-                <div class="brand-tag">Volkswagen 福斯</div>
-                <div class="brand-tag">Hyundai 現代</div>
-                <div class="brand-tag">Mitsubishi 三菱</div>
-                <div class="brand-tag">Suzuki 鈴木</div>
-                <div class="brand-tag">Luxgen 納智捷</div>
+            <div class="faq-item">
+                <div class="q-text">需要準備什麼資料？</div>
+                <p>車主身分證正本、第二證件（健保卡/駕照）、行車執照。若是公司車，需另備營利事業登記證影本、公司大章、負責人小章。</p>
+            </div>
+            <div class="faq-item">
+                <div class="q-text">車子還有銀行貸款，可以再借嗎？</div>
+                <p>可以！我們專辦「分期車增貸」與「汽車二胎」。只要車輛評估尚有空間，皆可辦理，不需先結清銀行貸款。</p>
+            </div>
+            <div class="faq-item">
+                <div class="q-text">信用瑕疵可以辦理嗎？</div>
+                <p>可以！我們主要評估「車輛價值」與「您的還款能力」，不調閱銀行聯徵紀錄，信用小白或有瑕疵皆可諮詢。</p>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <h3>台茂汽車借款</h3>
-            <p class="contact-detail">服務專線：<a href="tel:0287921111">02-8792-1111</a></p>
-            <p class="line-id">官方 LINE ID：<a href="https://line.me/ti/p/areDMMNJ5b" target="_blank" style="color: #00B900;">jeff617668</a></p>
-            <p style="font-size: 0.9rem; margin-top: 30px; opacity: 0.6;">
-                © 2026 台茂當鋪/程力開發 版權所有<br>
-                地址：台北市內湖區 (實際地址請依營業登記為主)
-            </p>
+    <section id="map" class="map-section">
+        <div class="map-info">
+            <div class="footer-info">
+                <h3>台茂汽車借款</h3>
+                <p><strong>羅經理 親自服務</strong></p>
+                <p>📍 地址：<a href="https://maps.google.com/?q=台北市內湖區成功路三段88號" target="_blank" style="color:var(--accent-color)">台北市內湖區成功路三段88號</a></p>
+                <p>📞 電話：<a href="tel:0287921111">02-8792-1111</a></p>
+                <p>💬 官方 LINE：<a href="https://line.me/R/ti/p/@104faknx" target="_blank">@104faknx</a></p>
+                <p style="margin-top:20px; font-size:0.9rem; opacity:0.8;">政府立案，合法經營，誠信至上。</p>
+            </div>
         </div>
-    </footer>
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=台北市內湖區成功路三段88號&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>© 2026 台茂當鋪/程力開發. All Rights Reserved.</p>
+    </div>
+
+    <div class="mobile-sticky-bar">
+        <a href="tel:0287921111" class="sticky-btn btn-call">📞 撥打電話</a>
+        <a href="https://line.me/R/ti/p/@104faknx" target="_blank" class="sticky-btn btn-line-sticky">💬 加 LINE 諮詢</a>
+    </div>
+
+    <div class="toggle-theme-btn" onclick="toggleSwitcher()">🎨</div>
+    <div class="theme-switcher" id="themeSwitcher">
+        <p style="margin-bottom:10px; font-weight:bold; text-align:center;">選擇網站風格</p>
+        <button class="theme-btn" onclick="setTheme('style1')" style="background:#003366;">1. 尊榮藍金 (預設)</button>
+        <button class="theme-btn" onclick="setTheme('style2')" style="background:#000000;">2. 科技黑銀</button>
+        <button class="theme-btn" onclick="setTheme('style3')" style="background:#800000;">3. 熱情紅黑</button>
+        <button class="theme-btn" onclick="setTheme('style4')" style="background:#2F4F4F;">4. 穩重墨綠</button>
+        <button class="theme-btn" onclick="setTheme('style5')" style="background:#4B0082;">5. 皇室紫金</button>
+        <button class="theme-btn" onclick="setTheme('style6')" style="background:#FF4500;">6. 活力亮橘</button>
+        <button class="theme-btn" onclick="setTheme('style7')" style="background:#555555;">7. 極簡水泥</button>
+        <button class="theme-btn" onclick="setTheme('style8')" style="background:#191970;">8. 深海靛藍</button>
+        <button class="theme-btn" onclick="setTheme('style9')" style="background:#8B4513;">9. 大地暖棕</button>
+        <button class="theme-btn" onclick="setTheme('style10')" style="background:#4682B4;">10. 鋼鐵灰藍</button>
+    </div>
+
+    <script>
+        function toggleSwitcher() {
+            var x = document.getElementById("themeSwitcher");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function setTheme(style) {
+            const root = document.documentElement;
+            switch(style) {
+                case 'style1': // 尊榮藍金 (Default)
+                    root.style.setProperty('--primary-color', '#003366');
+                    root.style.setProperty('--secondary-color', '#002244');
+                    root.style.setProperty('--accent-color', '#d4af37');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#f8f9fa');
+                    break;
+                case 'style2': // 科技黑銀 (Tesla Style)
+                    root.style.setProperty('--primary-color', '#000000');
+                    root.style.setProperty('--secondary-color', '#1a1a1a');
+                    root.style.setProperty('--accent-color', '#C0C0C0');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#f0f0f0');
+                    break;
+                case 'style3': // 熱情紅黑 (Ferrari Style)
+                    root.style.setProperty('--primary-color', '#800000'); // 深紅
+                    root.style.setProperty('--secondary-color', '#330000');
+                    root.style.setProperty('--accent-color', '#FF0000'); // 亮紅
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#fff5f5');
+                    break;
+                case 'style4': // 穩重墨綠 (Land Rover Style)
+                    root.style.setProperty('--primary-color', '#2F4F4F');
+                    root.style.setProperty('--secondary-color', '#1c2e2e');
+                    root.style.setProperty('--accent-color', '#daa520');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#f4f8f4');
+                    break;
+                case 'style5': // 皇室紫金 (High-End)
+                    root.style.setProperty('--primary-color', '#4B0082');
+                    root.style.setProperty('--secondary-color', '#2e0052');
+                    root.style.setProperty('--accent-color', '#FFD700');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#fbf8ff');
+                    break;
+                case 'style6': // 活力亮橘 (Approachable)
+                    root.style.setProperty('--primary-color', '#FF4500');
+                    root.style.setProperty('--secondary-color', '#b33000');
+                    root.style.setProperty('--accent-color', '#FFFF00');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#fff8f0');
+                    break;
+                case 'style7': // 極簡水泥 (Modern)
+                    root.style.setProperty('--primary-color', '#444444');
+                    root.style.setProperty('--secondary-color', '#222222');
+                    root.style.setProperty('--accent-color', '#888888');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#e0e0e0');
+                    break;
+                case 'style8': // 深海靛藍 (Corporate)
+                    root.style.setProperty('--primary-color', '#191970');
+                    root.style.setProperty('--secondary-color', '#000033');
+                    root.style.setProperty('--accent-color', '#00BFFF');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#f0f8ff');
+                    break;
+                case 'style9': // 大地暖棕 (Comfort)
+                    root.style.setProperty('--primary-color', '#8B4513');
+                    root.style.setProperty('--secondary-color', '#52290b');
+                    root.style.setProperty('--accent-color', '#DEB887');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#faf0e6');
+                    break;
+                case 'style10': // 鋼鐵灰藍 (Industrial)
+                    root.style.setProperty('--primary-color', '#4682B4');
+                    root.style.setProperty('--secondary-color', '#2b506e');
+                    root.style.setProperty('--accent-color', '#B0C4DE');
+                    root.style.setProperty('--text-on-primary', '#ffffff');
+                    root.style.setProperty('--bg-light', '#f0f4f8');
+                    break;
+            }
+        }
+    </script>
 
 </body>
 </html>
