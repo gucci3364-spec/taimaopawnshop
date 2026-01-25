@@ -14,7 +14,7 @@
             --text-on-primary: #ffffff;
             --bg-light: #f8f9fa;
             --text-dark: #333;
-            --line-green: #00c300;
+            --line-green: #00B900; /* LINE 官方綠色 */
         }
 
         * {
@@ -29,7 +29,7 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--bg-light);
-            padding-bottom: 60px; /* 預留底部懸浮按鈕空間 */
+            padding-bottom: 70px; /* 預留底部懸浮按鈕空間 */
             transition: background-color 0.3s;
         }
 
@@ -107,9 +107,8 @@
 
         /* --- Hero Section --- */
         .hero {
-            /* 這裡使用漸層疊加背景圖，讓文字更清楚 */
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-blend-mode: multiply; /* 混合模式讓背景色與圖片融合 */
+            background-blend-mode: multiply;
             background-size: cover;
             background-position: center;
             color: var(--text-on-primary);
@@ -149,7 +148,7 @@
             display: inline-block;
             padding: 15px 40px;
             background-color: var(--accent-color);
-            color: #000; /* 按鈕文字固定黑色較清楚，或可依風格調整 */
+            color: #000;
             font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
@@ -212,7 +211,7 @@
 
         .step-num {
             background: var(--accent-color);
-            color: var(--primary-color); /* 數字顏色對比 */
+            color: var(--primary-color);
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -344,7 +343,56 @@
         .btn-call { background-color: var(--accent-color); color: black; }
         .btn-line-sticky { background-color: var(--line-green); color: white; }
 
-        /* --- Theme Switcher (Demo Only) --- */
+        /* --- 官方 LINE 懸浮按鈕 (NEW) --- */
+        .line-floating-btn {
+            position: fixed;
+            bottom: 140px; /* 位於手機底部選單上方 */
+            right: 20px;
+            width: 65px;
+            height: 65px;
+            background-color: #00B900;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,185,0,0.4);
+            z-index: 9998; /* 高於內容，略低於彈窗 */
+            text-decoration: none;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            /* 呼吸燈動畫 */
+            animation: pulse-green 2s infinite;
+        }
+
+        .line-floating-btn::after {
+            content: 'LINE';
+            position: absolute;
+            bottom: -20px;
+            font-size: 12px;
+            color: #333;
+            background: rgba(255,255,255,0.8);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 185, 0, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(0, 185, 0, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 185, 0, 0);
+            }
+        }
+
+        /* --- Theme Switcher --- */
         .theme-switcher {
             position: fixed;
             bottom: 80px;
@@ -355,7 +403,7 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             z-index: 10000;
             width: 200px;
-            display: none; /* 預設隱藏，點按鈕開啟 */
+            display: none; 
         }
         .theme-switcher.active { display: block; }
         .theme-btn {
@@ -581,14 +629,14 @@
             <div class="footer-info">
                 <h3>台茂汽車借款</h3>
                 <p><strong>羅經理 親自服務</strong></p>
-                <p>📍 地址：<a href="https://maps.google.com/?q=台北市內湖區成功路三段88號" target="_blank" style="color:var(--accent-color)">台北市內湖區成功路三段88號</a></p>
+                <p>📍 地址：<a href="https://maps.google.com/?q=台北市內湖區成功路三段88號" target="_blank" style="color:var(--text-on-primary); text-decoration: underline;">台北市內湖區成功路三段88號</a></p>
                 <p>📞 電話：<a href="tel:0287921111">02-8792-1111</a></p>
                 <p>💬 官方 LINE：<a href="https://line.me/R/ti/p/@104faknx" target="_blank">@104faknx</a></p>
                 <p style="margin-top:20px; font-size:0.9rem; opacity:0.8;">政府立案，合法經營，誠信至上。</p>
             </div>
         </div>
         <div class="map-container">
-            <iframe src="https://maps.google.com/maps?q=台北市內湖區成功路三段88號&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps?q=台北市內湖區成功路三段88號&output=embed" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -600,6 +648,10 @@
         <a href="tel:0287921111" class="sticky-btn btn-call">📞 撥打電話</a>
         <a href="https://line.me/R/ti/p/@104faknx" target="_blank" class="sticky-btn btn-line-sticky">💬 加 LINE 諮詢</a>
     </div>
+
+    <a href="https://line.me/R/ti/p/@104faknx" target="_blank" class="line-floating-btn" title="加入官方LINE">
+        💬
+    </a>
 
     <div class="toggle-theme-btn" onclick="toggleSwitcher()">🎨</div>
     <div class="theme-switcher" id="themeSwitcher">
